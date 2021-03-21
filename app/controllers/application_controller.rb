@@ -37,7 +37,7 @@ class ApplicationController < Sinatra::Base
   get '/articles/:id/edit' do
     puts "I'm here"
     puts params[:id]
-    binding.pry
+
   end
 
 end
