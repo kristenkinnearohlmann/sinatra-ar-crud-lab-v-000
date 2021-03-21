@@ -1,5 +1,6 @@
 <h1>Edit an article</h1>
 <form method="POST" action="/articles/:id">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
   <p>
     <label for="title">Article title: </label>
     <input type-"text" id="title" name="title" value="<%= @article[:title] %>">
