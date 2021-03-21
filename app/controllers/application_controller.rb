@@ -52,4 +52,8 @@ class ApplicationController < Sinatra::Base
     redirect "/articles/#{@article[:id]}" # need double quotes to invoke string interpolation
   end
 
+  delete '/articles/:id' do
+    puts "In delete route"
+  end
+
 end
