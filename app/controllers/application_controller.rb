@@ -35,8 +35,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id/edit' do
-    puts "I'm here"
-    puts params[:id]
+    @article = Article.find(params[:id])
 
     erb :'../views/edit'
   end
