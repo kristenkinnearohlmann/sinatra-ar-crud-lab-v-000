@@ -2,5 +2,6 @@
 <h2><%= @article[:id] %>. <%= @article[:title] %></h2>
 <p><%= @article[:content] %></p>
 <form method="POST" action="/articles/<%= @article[:id] %>">
-  <input type="submit" id="delete" name="delete">
+  <input type="hidden">
+  <input type="submit" id="delete" name="delete" value="Delete">
 </form>
