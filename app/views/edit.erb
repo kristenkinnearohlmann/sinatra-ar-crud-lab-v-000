@@ -1,4 +1,11 @@
-<h1>Edit the article</h1>
+<h1>Edit an article</h1>
 <form method="POST" action="/articles/:id">
-  <input type="text" id="title" name="title" value="<%= "cat" %>">
+  <p>
+    <label for="title">Article title: </label>
+    <input type-"text" id="title" name="title" value="<%= @article[:title] %>">
+    <br>
+    <label for="content">Content: </label>
+    <textarea id="content" name="content" value="<%= @article[:content] %>"></textarea>
+  </p>
+  <input type="submit" id="submit" name="submit">
 </form>
