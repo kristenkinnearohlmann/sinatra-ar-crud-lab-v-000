@@ -41,13 +41,15 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/articles/:id' do
-    puts "In patch route for articles"
 
     @article = Article.find(params[:id])
-    puts @article[:content]
+
     @article.title = params[:title]
     @article.content = params[:content]
-    puts @article[:content]
+
+    @article.save
+
+    redirect "/articles/#{@article[:id]}" # need double quotes to invoke string interpolation
   end
 
 end
