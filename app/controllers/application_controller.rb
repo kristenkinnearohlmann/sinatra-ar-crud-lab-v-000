@@ -53,9 +53,10 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/articles/:id' do
-    puts "In delete route"
-    puts params[:id]
-    # go back to all articles
+
+    Article.destroy(params[:id])
+
+    redirect "/articles
   end
 
 end
