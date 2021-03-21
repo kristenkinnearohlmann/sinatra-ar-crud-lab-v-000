@@ -45,6 +45,8 @@ class ApplicationController < Sinatra::Base
     puts params
     @article = Article.find(params[:id])
     puts @article[:id]
+    puts @article[:title]
+    puts @article[:content]
   end
 
 end
