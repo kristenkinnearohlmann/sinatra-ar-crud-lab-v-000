@@ -38,6 +38,7 @@ class ApplicationController < Sinatra::Base
     puts "I'm here"
     puts params[:id]
 
+    erb :'../views/edit'
   end
 
 end
