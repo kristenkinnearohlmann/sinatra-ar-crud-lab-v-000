@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
     puts "In patch route for articles"
     puts params
     @article = Article.find(params[:id])
-    puts @article
+    puts @article[:id]
   end
 
 end
