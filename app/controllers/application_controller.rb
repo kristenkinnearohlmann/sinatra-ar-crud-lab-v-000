@@ -40,4 +40,8 @@ class ApplicationController < Sinatra::Base
     erb :'../views/edit'
   end
 
+  patch '/articles/:id' do
+    puts "In patch route for articles"
+  end
+
 end
