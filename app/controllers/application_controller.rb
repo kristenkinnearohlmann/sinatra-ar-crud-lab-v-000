@@ -47,6 +47,7 @@ class ApplicationController < Sinatra::Base
     puts @article[:id]
     puts @article[:title]
     puts @article[:content]
+    puts params[:content]
   end
 
 end
